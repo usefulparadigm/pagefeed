@@ -15,19 +15,12 @@ end
 get '/rss' do
   page_id = params[:page_id]
   halt "page_id is required!" unless page_id
-  # @page = get_page(page_id)
   @posts = get_page_posts(page_id)
-  @page = @posts.first["from"]
   builder :rss if @posts
 end
 
 
 private
-
-# def get_page(page_id)
-#   page_url = "https://graph.facebook.com/#{page_id}?access_token=#{access_token}&fields=#{PAGE_FIELDS}"
-#   fetch(page_url)
-# end
 
 def get_page_posts(page_id)
   feed_url = "https://graph.facebook.com/#{page_id}/posts?access_token=#{access_token}&fields=#{POST_FIELDS}"
