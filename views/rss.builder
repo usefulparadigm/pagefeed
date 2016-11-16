@@ -11,7 +11,6 @@ xml.rss :version => "2.0" do
         xml.link post["permalink_url"]
         xml.description post["description"]
         xml.pubDate Time.parse(post["created_time"]).rfc822
-        xml.image post["full_picture"]
         xml.guid post["id"]
       end
     end
