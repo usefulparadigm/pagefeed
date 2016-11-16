@@ -3,7 +3,6 @@ GEM
   specs:
     backports (3.6.8)
     builder (3.2.2)
-    dotenv (2.1.1)
     multi_json (1.12.1)
     rack (1.6.5)
     rack-protection (1.5.3)
@@ -28,7 +27,6 @@ PLATFORMS
 
 DEPENDENCIES
   builder
-  dotenv
   sinatra
   sinatra-contrib
 
