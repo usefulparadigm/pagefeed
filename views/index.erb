@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PageFeed</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="page-header">PageFeed <small>RSS Feed for Facebook Page</small></h1>
+    
+    <form action="/rss" method="get">
+      <div class="form-group">
+        <label for="pageId">Page ID</label>
+        <input type="text" name="page_id" class="form-control" id="pageId" placeholder="Facebook Page ID">
+      </div>
+      <button type="submit" class="btn btn-primary">Get RSS Feed</button>
+    </form>
+
+  </div> <!-- /container -->
+</body>
+</html>
