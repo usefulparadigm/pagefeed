@@ -18,8 +18,7 @@ get '/rss' do
   # @page = get_page(page_id)
   @posts = get_page_posts(page_id)
   @page = @posts.first["from"]
-  @posts.first.to_s
-  # builder :rss if @posts
+  builder :rss if @posts
 end
 
 
