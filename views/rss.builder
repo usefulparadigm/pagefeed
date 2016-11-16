@@ -7,9 +7,9 @@ xml.rss :version => "2.0" do
 
     @posts.each do |post|
       xml.item do
-        xml.title post["message"]
+        xml.title post["name"]
         xml.link post["permalink_url"]
-        xml.description post["description"]
+        xml.description post["message"]
         xml.pubDate Time.parse(post["created_time"]).rfc822
         xml.guid post["id"]
       end

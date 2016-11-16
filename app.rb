@@ -6,7 +6,7 @@ require 'json'
 require 'builder'
 
 PAGE_FIELDS = "name,about,username,link,picture{url}"
-POST_FIELDS = "description,message,created_time,type,permalink_url,full_picture,updated_time,from"
+POST_FIELDS = "name,message,description,created_time,type,permalink_url,full_picture,updated_time,from"
 
 get '/' do
   erb :index
@@ -18,7 +18,8 @@ get '/rss' do
   # @page = get_page(page_id)
   @posts = get_page_posts(page_id)
   @page = @posts.first["from"]
-  builder :rss if @posts
+  @posts.first.to_s
+  # builder :rss if @posts
 end
 
 
