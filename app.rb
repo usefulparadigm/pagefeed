@@ -18,22 +18,26 @@ get '/' do
   erb :index
 end
 
+# preserving for backward compatibility
 get '/rss' do
-  # preserving page_id for backward compatibility
   page_id = params[:page_id].to_s
   if page_id.empty?
     page_url = params[:page_url].to_s
     halt "page_url is required!" if page_url.empty?
     page_id = get_page_id(page_url)
-  end  
+  end
   if page_id && !page_id.empty?
-    @posts = get_page_posts(page_id)
-    builder :rss if @posts
+    redirect to("/#{page_id}.rss")
   else
     halt "Invalid Page URL. Try again!"
   end
 end
 
+get '/:page_id.rss' do
+  page_id = params[:page_id]
+  @posts = get_page_posts(page_id)
+  builder :rss if @posts
+end
 
 private
 
