@@ -34,8 +34,8 @@ get '/rss' do
 end
 
 get '/:page_id.rss' do
-  page_id = params[:page_id]
-  @posts = get_page_posts(page_id)
+  @page_id = params[:page_id]
+  @posts = get_page_posts(@page_id)
   builder :rss if @posts
 end
 
