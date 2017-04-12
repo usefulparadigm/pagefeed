@@ -15,6 +15,7 @@ Deploying to [Heroku](https://www.heroku.com)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
+OR;
 
 1. Clone this repo.
 2. Create a new Facebook App from [Facebook for Developers](https://developers.facebook.com/apps) and get the App Id and App Secret code.
