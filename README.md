@@ -13,11 +13,15 @@ You can clone this app and deploy it to any hosting platform that support ruby!
 Deploying to [Heroku](https://www.heroku.com)
 --
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+
 1. Clone this repo.
 2. Create a new Facebook App from [Facebook for Developers](https://developers.facebook.com/apps) and get the App Id and App Secret code.
 3. Create a new Heroku app and deploy.
 4. Add your Facebook App's credential to Heroku app: `$ heroku config:set FACEBOOK_APP_ID=[Your Facebook App Id] FACEBOOK_APP_SECRET=[Your Facebook App Secret]`
 5. Done!
+
 
 Reference
 --
