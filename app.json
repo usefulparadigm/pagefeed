@@ -1,7 +1,7 @@
 {
   "name": "PageFeed",
-  "description": "Get RSS feed for any Facebook Page",
+  "description": "RSS feed for any Facebook Page",
   "repository": "https://github.com/usefulparadigm/pagefeed",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "logo": "https://usefulpa.s3.amazonaws.com/images/2017/logo-pagefeed.png",
   "keywords": ["facebook", "rss", "feed", "ruby"]
 }
